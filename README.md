@@ -1,89 +1,83 @@
-# Implementation of Erosion and Dilation Using OpenCV
+# edge-detection-opencv
 
 ## Aim
 
-To write a Python program using OpenCV to perform morphological operations such as Erosion and Dilation on an image.
+To perform edge detection using Sobel, Roberts, Prewitt, Laplacian, and Canny edge detectors.
 
-The program performs the following operations:
+---
 
-- Image Erosion
-- Image Dilation
+## Software Required
 
-## Software Used
+- Anaconda – Python 3.7  
+- Jupyter Notebook / VS Code  
+- OpenCV (cv2)  
+- NumPy  
+- Matplotlib  
 
-- Anaconda – Python 3.7
-- Jupyter Notebook / VS Code
-- OpenCV (cv2)
-- NumPy
-- Matplotlib
+---
 
-## Algorithm
+## ⚙️ Algorithm
 
 ### Step 1:
-
-Import the required libraries: OpenCV, NumPy, and Matplotlib.
+Import all the necessary modules for the program.
 
 ### Step 2:
-
-Create a blank image using NumPy.
+Load an image using `cv2.imread()`.
 
 ### Step 3:
-
-Insert text onto the image using OpenCV's text drawing function.
+Convert the image to grayscale.
 
 ### Step 4:
-
-Display the original image.
+Apply **Sobel operator** using OpenCV to detect edges.
 
 ### Step 5:
+Apply **Prewitt operator** using custom kernels.
 
-Create a structuring element (kernel) of suitable size.
+### Step 6:
+Apply **Roberts operator** using custom kernels.
 
-### Step 6: Image Erosion
-
-- Apply the erosion operation using the created kernel.
-- Remove pixels from the boundaries of foreground objects.
-- Display the eroded image.
-
-### Step 7: Image Dilation
-
-- Apply the dilation operation using the same kernel.
-- Add pixels to the boundaries of foreground objects.
-- Display the dilated image.
+### Step 7:
+Apply **Laplacian operator** using OpenCV.
 
 ### Step 8:
+Apply **Canny edge detector** using OpenCV.
 
-Compare the original, eroded, and dilated images.
+### Step 9:
+Display all edge-detected images for comparison.
 
-## Program
+---
 
 ## Developed By
 
-**Name:** ____________________________
+- **Name:** ____________________________  
+- **Register No:** ______________________  
 
-**Register No:** ______________________
+---
 
 ## Output
 
-### Original Image
+###  Sobel Edge Detector
+- Detects edges in horizontal and vertical directions  
+- Produces gradient-based edge map  
 
-- A text image containing characters is displayed.
-- The image serves as the input for morphological processing.
+###  Prewitt Edge Detector
+- Similar to Sobel but simpler kernel  
+- Detects directional edges  
 
-### Erosion
+###  Roberts Edge Detector
+- Detects edges using diagonal gradients  
+- Sensitive to noise  
 
-- Original image is displayed.
-- Eroded image is displayed.
-- The thickness of the characters is reduced.
-- Object boundaries shrink inward.
+###  Laplacian Edge Detector
+- Detects edges using second-order derivatives  
+- Highlights rapid intensity changes  
 
-### Dilation
+###  Canny Edge Detector
+- Multi-stage edge detection  
+- Produces clean and thin edges  
 
-- Original image is displayed.
-- Dilated image is displayed.
-- The thickness of the characters increases.
-- Object boundaries expand outward.
+---
 
 ## Result
 
-Thus, the morphological operations **Erosion** and **Dilation** are successfully implemented using OpenCV.
+Thus, edges are successfully detected using Sobel, Prewitt, Roberts, Laplacian, and Canny edge detection techniques. Each method highlights edges differently based on gradient and intensity variations, improving feature extraction and analysis.
